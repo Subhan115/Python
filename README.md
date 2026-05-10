@@ -12,5 +12,5 @@ Welcome to my repository of Python projects. This collection showcases my journe
 ---
 **Tools & Environment:** - **IDE:** Pydroid 3 (Android) 
 - **Language:** Python 3.13
-- 
+
 A collection of my Python projects and logic-based games.
