@@ -28,4 +28,7 @@ Copy `.env.example` to a new file named `.env` and add your keys:
 OPENROUTER_API_KEY=your_key_here
 NEWS_API_KEY=your_key_here
 
-
+### Step 3: Launch the Interface
+Run the main script to initialize the system engine and start the automation framework:
+```bash
+python "Multi Function AI Tool.py"
