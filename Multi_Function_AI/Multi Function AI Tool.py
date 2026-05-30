@@ -148,6 +148,22 @@ def handle_ai_chat(user_prompt: str, chat_history: list):
 # ==========================================
 # MAIN INTERFACE CONTROLLER
 # ==========================================
+def print_help_menu():
+    """Prints the basic usage instructions for the user."""
+    print(" " + "-"*58)
+    print("  BASIC INSTRUCTIONS & COMMANDS")
+    print(" " + "-"*58)
+    print("  • shortcuts                   - List all custom key mappings")
+    print("  • add shortcut <key> <url>    - Add/save a quick web shortcut")
+    print("  • remove shortcut <key>       - Remove an existing shortcut")
+    print("  • <shortcut_key>              - Type a saved key directly to open it")
+    print("  • open <url/query>            - Open specific site or search Google")
+    print("  • news <topic>                - Fetch top headlines on a topic")
+    print("  • <any other text>            - Chat directly with the AI Assistant")
+    print("  • help                        - Show this command manual again")
+    print("  • exit / quit                 - Terminate the system engine")
+    print(" " + "-"*58 + "\n")
+
 def main():
     shortcuts = load_shortcuts()
     chat_history = [
@@ -155,11 +171,14 @@ def main():
     ]
     
     print("\n" + "="*60)
-    print(" SYSTEM CONTROL INTERFACE v1.0.0")
+    print(" SYSTEM CONTROL INTERFACE v1.1.0")
     print("="*60)
     print(" STATUS: Active & Secure Environment")
     print(" CONFIG: Production Build (.env Active)")
     print("="*60 + "\n")
+
+    # Display the basic instructions immediately on startup
+    print_help_menu()
 
     while True:
         try:
@@ -177,6 +196,10 @@ def main():
             break
 
         # Commands Processing
+        if text_lower == 'help':
+            print_help_menu()
+            continue
+
         if text_lower == 'shortcuts':
             print("\n[ACTIVE SHORTCUT MAPPINGS]")
             if not shortcuts:
@@ -250,3 +273,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    
