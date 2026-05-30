@@ -21,9 +21,11 @@ Follow these streamlined deployment steps to set up the control interface on you
 Execute the following command in your terminal or command prompt to install all necessary external package requirements:
 ```bash
 pip install -r requirements.txt
-
+```
 ### Step 2: Configure Environment Variables
 Copy `.env.example` to a new file named `.env` and add your keys:
 
 OPENROUTER_API_KEY=your_key_here
 NEWS_API_KEY=your_key_here
+
+
